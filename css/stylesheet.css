@@ -1,0 +1,191 @@
+/* color palette */
+/* 1a1b25 */
+/* ffdab9 */
+
+/* Notes */
+/* copied from lesson10V2_gridV3 */
+
+/* ***************serif fonts ********************************* */
+/* font-family: 'IM Fell English SC', serif; */
+/* 400 regular */
+
+/* font-family: 'Rye', cursive; */
+/* 400 regular */
+
+/* font-family: 'Vollkorn SC', serif; */
+/* 400 regular */
+
+/* ************************ san serif fonts ****************************************** */
+/* font-family: 'Montserrat', sans-serif; */
+/* 400 regular, 300 light */
+
+/* font-family: 'Quicksand', sans-serif; */
+/* 400 regular */
+
+/* font-family: 'Kumbh Sans', sans-serif; */
+/* 400 regular, 300 light */
+
+/* *************** Global *************** */
+/*
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+https://css-tricks.com/inheriting-box-sizing-proaly-slightly-bbetter-best-practice/
+*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    background-color: #1a1b25;
+    text-align: center;
+    margin: 0;
+}
+
+/* set up for mobile screen */
+.grid {
+    padding: 0;
+    margin: 0;
+    background-color: #1a1b25;
+    display: grid;
+    grid-template-areas:
+        'one'
+        'two'
+        'three'
+        'four'
+        'five';
+}
+
+.grid-item-4 {
+    background-color: #ffdab9;
+}
+
+/* Heading */
+h1 {
+    font-family: 'Vollkorn SC', serif;
+    font-size: 72px;
+    color: #ffdab9;
+    padding: 0;
+    margin: 0;
+    line-height: 1.0;
+    padding: 10px;
+    margin: 0;
+}
+h2 {
+    font-family: 'Vollkorn SC', serif;
+    font-size: 36px;
+    color: #ffdab9;
+    padding: 0;
+    margin: 0;
+    padding: 10px;
+    margin: 0;  
+}
+/* Navigation */
+li {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 21px;
+    color: #ffdab9;
+    list-style: none; 
+    padding: 10px;
+    margin: 0;
+}
+/* Portfolio */
+h3 {
+    color: #1a1b25;
+    font-size: 30px;
+    background-color: #ffdab9;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0;
+}
+li {
+    display: inline;
+}
+h4 {
+    color: black;
+    font-size: 28px;
+    padding: 10px;
+    margin: 0;
+}
+img {
+    padding: 10px;
+    width: 80%;
+}
+/* Footer */
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #ffdab9;
+    padding: 20px 10px 20px 10px;
+    margin: 0;
+}
+address {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #ffdab9;
+    padding: 30px 10px 20px 10px;
+    margin: 0;
+}
+.grid-item-5 img {
+    width: 50px;
+}
+a {
+    color: #ffdab9;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* media queries */
+
+/* large screen should have grid stacked with two column right side panel */
+@media (min-width: 750px) {
+    .grid {
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: 55% 45%;
+        grid-template-areas:
+            'one four'
+            'two four'
+            'three four'
+            'five four';
+    } 
+    .grid-item-4 {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 5;
+        background-color: #ffdab9;
+        display: grid;
+        gap: .5rem;
+        grid-template-areas:
+        'one two three'
+        'four five six'
+        'seven eight nine';
+    }
+}
+
+/* screen size medium with grid should be stacked, grid-item-4 should be single stack */
+/* @media (min-width: 550px) {
+    .grid {
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-areas:
+            'one four'
+            'two four'
+            'three four'
+            'five four';
+    }
+
+    .grid-item-4 {
+        grid-template-areas:
+        'one'
+        'two'
+        'three'
+        'four';
+    }   
+} */
