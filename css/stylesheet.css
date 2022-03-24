@@ -2,9 +2,6 @@
 /* 1a1b25 */
 /* ffdab9 */
 
-/* Notes */
-/* copied from lesson10V2_gridV3 */
-
 /* ***************serif fonts ********************************* */
 /* font-family: 'IM Fell English SC', serif; */
 /* 400 regular */
@@ -63,43 +60,106 @@ body {
 /* Heading */
 h1 {
     font-family: 'Vollkorn SC', serif;
-    font-size: 72px;
+    font-size: 60px;
     color: #ffdab9;
-    padding: 0;
-    margin: 0;
     line-height: 1.0;
-    padding: 10px;
+    padding: 40px 10px 10px 10px;
     margin: 0;
 }
 h2 {
-    font-family: 'Vollkorn SC', serif;
-    font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    color: #ffdab9;
+    padding: 10px;
+    margin: 0; 
+    line-height: 1.0; 
+}
+hr {
+    color: #ffdab9;
+}
+/* Navigation */
+nav {
+    background: #1a1b25;
     color: #ffdab9;
     padding: 0;
     margin: 0;
-    padding: 10px;
-    margin: 0;  
 }
-/* Navigation */
-li {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 21px;
+nav .navbar {
+    margin: 0 auto;
+    padding: 10px 0;
+}
+nav ul {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    position: relative;
+    font: bold 16px 'Montserrat', sans-serif;
+    width: 120px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+nav ul li:hover {
+    background-color: #ffdab9;
+    text-decoration-line: underline;
+    text-decoration-color: #1a1b25;
+    text-decoration-style: solid;
+    border-radius: 10px;
+    text-decoration-thickness: 2px;
+    color: #1a1b25;
+}
+nav ul li ul {
+    position: absolute;
+    top: 48px;
+    left: -2000px;
+    padding-left: 140px;
+    margin-top: -48px;
+}
+nav ul li ul li {
+    background-color: #ffdab9;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 12px; 
+    padding-bottom: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font: normal 14px 'Montserrat', sans-serif;
+}
+nav ul li ul li:hover {
+    background: white;
+}
+nav ul li:hover ul {
+    display: block;
+    left: 0px;
+}
+/*  nav */
+
+
+
+
+/* .hamburger-menu {
+    display: inline-flex;
     color: #ffdab9;
-    list-style: none; 
-    padding: 10px;
-    margin: 0;
+    padding: 10px;   
 }
+label {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;  
+} */
+
 /* Portfolio */
 h3 {
+    font-family: 'Vollkorn SC', serif;
     color: #1a1b25;
-    font-size: 30px;
+    font-size: 40px;
     background-color: #ffdab9;
     padding-top: 30px;
     padding-bottom: 30px;
     margin: 0;
-}
-li {
-    display: inline;
 }
 h4 {
     color: black;
@@ -134,7 +194,7 @@ address {
 }
 a {
     color: #ffdab9;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 18px;
     font-weight: 300;
 }
@@ -143,6 +203,13 @@ a {
 
 /* large screen should have grid stacked with two column right side panel */
 @media (min-width: 750px) {
+    h1 {
+        font-size: 72px;      
+    }
+    h2 {
+        font-weight: 400;
+        font-size: 36px;      
+    }
     .grid {
         padding: 0;
         margin: 0;
@@ -166,7 +233,30 @@ a {
         'four five six'
         'seven eight nine';
     }
+    .grid-item-2.navbar {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 21px;
+        font-weight: 300;
+        color: #ffdab9;
+        list-style: none; 
+        padding: 10px;
+        margin: 0;
+    }
+    nav ul {   
+        text-align: center;   
+    }
+    nav ul li {
+        display: inline;
+    }
+    nav ul li ul {
+        top: 85px;
+        padding-left: 0px;  
+    }
+    nav ul li ul li {
+        display: block;
+    }
 }
+
 
 /* screen size medium with grid should be stacked, grid-item-4 should be single stack */
 /* @media (min-width: 550px) {
@@ -189,3 +279,4 @@ a {
         'four';
     }   
 } */
+
